@@ -1,0 +1,22 @@
+{
+  "name": "Huddersfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "http-server ."
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.1",
+    "http-server": "^0.12.3",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  }
+}
