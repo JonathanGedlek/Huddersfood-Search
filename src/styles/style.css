@@ -1,0 +1,20 @@
+#mapDiv {
+    height: 100%;
+
+    border-style: solid;
+}
+
+html,
+body {
+  height: 70%;
+  margin: 0;
+  padding: 0;
+}
+
+.headingImg{
+  width:100%;
+}
+
+.logoImg{
+  width:30%;
+}
