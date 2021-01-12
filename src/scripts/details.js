@@ -49,6 +49,7 @@ function takeawayDetails(takeaway) {
     const address = document.getElementById("address");
     const lat = takeaway[id].lat;
     const lng = takeaway[id].lng;
+    
     name.textContent = takeaway[id].name;
     picture.setAttribute("src", "./pictures/" + takeaway[id].picture);
     logo.setAttribute("src", "./pictures/" + takeaway[id].logo);
