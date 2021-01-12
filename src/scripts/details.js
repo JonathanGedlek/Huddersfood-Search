@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
 function loadTakeaways(url, callback) {
     fetch(url).then(function (response) {
         return response.json();
@@ -37,8 +40,6 @@ function createMap(lat, lng) {
 
 
 function takeawayDetails(takeaway) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
     const name = document.getElementById("name");
     const picture = document.getElementById("picture");
     const logo = document.getElementById("logo");
@@ -49,7 +50,7 @@ function takeawayDetails(takeaway) {
     const address = document.getElementById("address");
     const lat = takeaway[id].lat;
     const lng = takeaway[id].lng;
-    
+
     name.textContent = takeaway[id].name;
     picture.setAttribute("src", "./pictures/" + takeaway[id].picture);
     logo.setAttribute("src", "./pictures/" + takeaway[id].logo);
@@ -62,12 +63,28 @@ function takeawayDetails(takeaway) {
     createMap(lat, lng);
 }
 
+function saveTakeaway() {
+    if (localStorage.getItem("favourites") === null) {
+        var favourites = id + " ";
+        localStorage.setItem("favourites", favourites);
+    }
+    else {
+        var retrievedData = localStorage.getItem("favourites");
+        var arr = retrievedData.split(" ");
+        if (arr.includes(id) == false) {
+            var favourites = retrievedData + id + " ";
+            localStorage.setItem("favourites", favourites);
+        }
+    }
+}
+
 function init() {
     loadTakeaways("./json/takeaways.json", takeawayDetails);
 }
 
-
 google.maps.event.addDomListener(window, "load", init);
+
+document.getElementById("favourite").onclick = function () { saveTakeaway() };
 
 
 
