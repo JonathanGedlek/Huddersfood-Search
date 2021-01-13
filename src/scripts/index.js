@@ -5,7 +5,7 @@ function createMap(url) {
         const mapStyle = json;
 
         var mapOptions = {
-            center: new google.maps.LatLng("53.644045", "-1.777420"),
+            center: new google.maps.LatLng("53.64661378473948", "-1.782342991579756"),
             zoom: 16,
             disableDefaultUI: false,
             mapTypeControl: true,
@@ -43,6 +43,17 @@ function createMarkers(map) {
             })
         });
     });
+}
+
+function openNav() {
+    document.getElementById("Sidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("Sidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
 }
 
 
