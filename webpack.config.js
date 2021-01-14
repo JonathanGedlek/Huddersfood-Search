@@ -11,9 +11,9 @@ module.exports = {
                         options: { minimize:true }
                     }
                 ]
-            },
-            
+            },    
         ]
+        
     },
     plugins: [
         

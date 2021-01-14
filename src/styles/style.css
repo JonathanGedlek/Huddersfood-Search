@@ -1,4 +1,9 @@
-#mapDiv { 
+body{
+  height: 100vh;
+  background-color: white;
+}
+
+.map { 
     height: 81%;
     width:100%;
     border-style: solid;
@@ -14,10 +19,6 @@ ul{
   height:70px;
 }
 
-body{
-  height: 100vh;
-  background-color: white;
-}
 
 .heading{
   position: absolute;
@@ -28,13 +29,11 @@ body{
   width:90px;
 }
 
-
-
-#address{
+.address{
   font-size: 30px;
 }
 
-#web_link{
+.web_link{
   color:black;
 }
 
@@ -44,7 +43,6 @@ body{
   max-height: 100vh;
   margin: auto;
 }
-
 
 .sidebar{
   padding-top:40px;
@@ -99,7 +97,7 @@ body{
   background-color: #444;
 }
 
-#main {
+.main {
   transition: margin-left .5s; 
 }
 
@@ -120,17 +118,17 @@ body{
     font-size: 30px;
   }
 
-  #address{
+  .address{
     font-size:20px;
   }
 
-  #description{
+  .description{
     font-size:12px;
   }
 }
 
 @media screen and (max-width:430px){
-  #description{
+  .description{
     font-size:9px;
   }
 }
@@ -143,7 +141,7 @@ body{
     font-size: 20px;
   }
 
-  #address{
+  .address{
     font-size: 10px;
   }
 }
