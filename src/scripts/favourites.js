@@ -44,9 +44,7 @@ function populateTakeawayList(takeaways) {
     });
 }
 
-function init() {
-    loadTakeaways("./json/takeaways.json", populateTakeawayList);
-}
+
 
 function openNav() {
     document.getElementById("Sidebar").style.width = "250px";
@@ -58,6 +56,12 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
+function init() {
+    loadTakeaways("./json/takeaways.json", populateTakeawayList);
+}
+
 init();
+
+
 
 

@@ -55,7 +55,6 @@ function takeawayDetails(takeaway) {
     web_link.setAttribute("href", takeaway[id].web_link);
     description.textContent = takeaway[id].description;
     food_type.textContent = takeaway[id].food_type;
-    
     address.innerHTML = takeaway[id].address;
 
     createMap(lat, lng);
@@ -76,6 +75,35 @@ function saveTakeaway() {
     }
 }
 
+function deleteTakeaway(){
+    if (localStorage.getItem("favourites") != null) {
+        var retrievedData = localStorage.getItem("favourites");
+        var arr = retrievedData.split(" ");
+        var favourites = "";
+        for(i=0;i < arr.length;i++){
+            if (arr[i] != id){
+                favourites += arr[i] + " ";
+            }
+        }
+        localStorage.setItem("favourites", favourites);
+    }
+}
+
+function checkIfFavourited(){
+    if (localStorage.getItem("favourites") != null) {
+        var retrievedData = localStorage.getItem("favourites");
+        var arr = retrievedData.split(" ");
+        if(arr.includes(id)){
+            var favouriteLink = document.getElementById("favourite");
+            favouriteLink.style.display = "none";
+        }
+        else{
+            var deleteLink = document.getElementById("delete");
+            deleteLink.style.display = "none";
+        }
+    }
+}
+
 function openNav() {
     document.getElementById("Sidebar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -88,11 +116,14 @@ function closeNav() {
 
 function init() {
     loadTakeaways("./json/takeaways.json", takeawayDetails);
+    checkIfFavourited();
 }
 
 google.maps.event.addDomListener(window, "load", init);
 
 document.getElementById("favourite").onclick = function () { saveTakeaway() };
+
+document.getElementById("delete").onclick = function () { deleteTakeaway() };
 
 
 

@@ -29,8 +29,9 @@ body{
 }
 
 
+
 #address{
-  font-size:30px;
+  font-size: 30px;
 }
 
 #web_link{
@@ -119,12 +120,22 @@ body{
     font-size: 30px;
   }
 
-  .shrinkText{
+  #address{
     font-size:20px;
+  }
+
+  #description{
+    font-size:12px;
   }
 }
 
-@media screen and (max-width:320px){
+@media screen and (max-width:430px){
+  #description{
+    font-size:9px;
+  }
+}
+
+@media screen and (max-width:330px){
   .logo{
     width:50px;
   }
@@ -132,7 +143,11 @@ body{
     font-size: 20px;
   }
 
-  .text-shrink{
+  #address{
     font-size: 10px;
   }
+
+
+}
+
 }

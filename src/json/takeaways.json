@@ -15,7 +15,7 @@
     {
         "id": 1,
         "name": "Mcdonalds",
-        "description": "Huddersfields Golden Arches, found in the city centre next to pidgeon park. Serves many types of tasty burgers for a good price.",
+        "description": "Huddersfields Golden Arches, serves many types of tasty burgers for a good price.",
         "address": "1 Kirkgate <br>Huddersfield <br>HD1 1QJ",
         "food_type": "Burgers",
         "web_link": "https://www.just-eat.co.uk/restaurants-mcdonalds-huddersfield/menu?utm_source=google&utm_medium=organic&utm_campaign=orderaction",
@@ -41,7 +41,7 @@
     {
         "id": 3,
         "name": "Costa Coffee",
-        "description": "Costa is the place for hot drinks and light lunches, worth a visit for anyone needing a proper coffee fix.",
+        "description": "A great choice for people looking for hot drinks and light lunches.",
         "address": "26 New St <br>Huddersfield <br>HD1 2BU",
         "food_type": "Cafe",
         "web_link": "https://www.costa.co.uk/",
@@ -67,7 +67,7 @@
     {
         "id": 5,
         "name": "Greggs",
-        "description": "A staple of Huddersfield cuisine, a must have on your journey to work through the unique brutalist style bus station of the town centre.",
+        "description": "A staple of Huddersfield cuisine, a must have on your journey to work through the bus station.",
         "address": "Upperhead Row <br>Huddersfield <br>HD1 2JN",
         "food_type": "Bakery",
         "web_link": "https://www.just-eat.co.uk/restaurants-greggs-huddersfieldbusstation/menu",
@@ -79,8 +79,8 @@
     },
     {
         "id": 6,
-        "name": "Pan Asian Street Food",
-        "description": "authentic tastes of food from all around east asia. Worth the price tag and visit if you are craving beautifully cooked asian cuisine.",
+        "name": "Pan Asian",
+        "description": "authentic tastes of food from all around east asia.",
         "address": "4 Queen St <br>Huddersfield <br>HD1 2SQ",
         "food_type": "Asian",
         "web_link": "https://www.just-eat.co.uk/restaurants-pan-asian-street-huddersfield",
