@@ -24,7 +24,7 @@ function createMap(lat, lng) {
 
         var mapOptions = {
             center: new google.maps.LatLng(lat, lng),
-            zoom: 15,
+            zoom: 18,
             disableDefaultUI: false,
             mapTypeControl: true,
             gestureHandling: "greedy",
@@ -45,19 +45,17 @@ function takeawayDetails(takeaway) {
     const logo = document.getElementById("logo");
     const description = document.getElementById("description");
     const food_type = document.getElementById("food_type");
-    const price_lvl = document.getElementById("price_lvl");
     const web_link = document.getElementById("web_link");
     const address = document.getElementById("address");
     const lat = takeaway[id].lat;
     const lng = takeaway[id].lng;
-
     name.textContent = takeaway[id].name;
     picture.setAttribute("src", "./pictures/" + takeaway[id].picture);
     logo.setAttribute("src", "./pictures/" + takeaway[id].logo);
+    web_link.setAttribute("href", takeaway[id].web_link);
     description.textContent = takeaway[id].description;
     food_type.textContent = takeaway[id].food_type;
-    price_lvl.textContent = takeaway[id].price_lvl;
-    web_link.textContent = takeaway[id].web_link;
+    
     address.innerHTML = takeaway[id].address;
 
     createMap(lat, lng);
@@ -76,6 +74,16 @@ function saveTakeaway() {
             localStorage.setItem("favourites", favourites);
         }
     }
+}
+
+function openNav() {
+    document.getElementById("Sidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("Sidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
 }
 
 function init() {
