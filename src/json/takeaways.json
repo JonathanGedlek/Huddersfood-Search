@@ -10,7 +10,8 @@
         "lat": 53.643862,
         "lng": -1.773984,
         "picture": "Pinos.jpg",
-        "logo": "pinoslogo.jpg"
+        "logo": "pinoslogo.jpg",
+        "marker":"pinos.png"
     },
     {
         "id": 1,
@@ -23,7 +24,8 @@
         "lat": 53.64699326926403,
         "lng": -1.7822578605953314,
         "picture": "mcdonalds.jpg",
-        "logo": "mcdonaldslogo.png"
+        "logo": "mcdonaldslogo.png",
+        "marker":"mcdonalds.png"
     },
     {
         "id": 2,
@@ -36,7 +38,8 @@
         "lat": 53.646862052287,
         "lng": -1.7812887802373423,
         "picture": "mcnoodleking.jpeg",
-        "logo": "mcnoodlekinglogo.png"
+        "logo": "mcnoodlekinglogo.png",
+        "marker":"mcnoodleking.png"
     },
     {
         "id": 3,
@@ -49,7 +52,8 @@
         "lat": 53.64569358624732,
         "lng": -1.7829800815361496,
         "picture": "costa.jpg",
-        "logo": "costalogo.jpg"
+        "logo": "costalogo.jpg",
+        "marker":"costa.png"
     },
     {
         "id": 4,
@@ -62,7 +66,8 @@
         "lat": 53.64612642535971,
         "lng": -1.782356097067504,
         "picture": "KFC.png",
-        "logo": "kfclogo.png"
+        "logo": "kfclogo.png",
+        "marker":"kfc.png"
     },
     {
         "id": 5,
@@ -75,7 +80,8 @@
         "lat": 53.645617530556486,
         "lng": -1.78640051230436,
         "picture": "greggs.jpg",
-        "logo": "greggslogo.jpg"
+        "logo": "greggslogo.jpg",
+        "marker":"greggs.png"
     },
     {
         "id": 6,
@@ -88,7 +94,8 @@
         "lat": 53.6454879317264,
         "lng": -1.7804091163833207,
         "picture": "panasian.jpeg",
-        "logo": "panasianlogo.jpg"
+        "logo": "panasianlogo.jpg",
+        "marker":"panasian.png"
     },
     {
         "id": 7,
@@ -101,7 +108,8 @@
         "lat": 53.64689438467775,
         "lng": -1.7833061221153352,
         "picture": "icon.jpg",
-        "logo": "iconlogo.png"
+        "logo": "iconlogo.png",
+        "marker":"icon.png"
     },
     {
         "id": 8,
@@ -114,7 +122,8 @@
         "lat": 53.6465170297111,
         "lng": -1.7806442557970854,
         "picture": "chickenhut.jpg",
-        "logo": "chickenhutlogo.jpg"
+        "logo": "chickenhutlogo.jpg",
+        "marker":"chickenhut.png"
     },
     {
         "id": 9,
@@ -127,6 +136,7 @@
         "lat": 53.646710109612414,
         "lng": -1.7826671671957808,
         "picture": "subway.jpg",
-        "logo": "subwaylogo.png"
+        "logo": "subwaylogo.png",
+        "marker":"subway.png"
     }
 ]

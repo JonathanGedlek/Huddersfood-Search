@@ -6,7 +6,7 @@ function createMap(url) {
 
         var mapOptions = {
             center: new google.maps.LatLng("53.64661378473948", "-1.782342991579756"),
-            zoom: 16,
+            zoom: 15,
             disableDefaultUI: false,
             mapTypeControl: true,
             gestureHandling: "greedy",
@@ -25,9 +25,15 @@ function createMarkers(map) {
     }).then(function (json) {
         const takeaways = json;
         takeaways.forEach(function (takeaway) {
+            var icon = {
+                url: "./pictures/markers/"+takeaway.marker,
+                scaledSize: new google.maps.Size(50,50)
+            };
+
             let marker = new google.maps.Marker({
                 position: new google.maps.LatLng(takeaway.lat, takeaway.lng),
                 map,
+                icon:icon
             })
             const contentString =
                 '<div id="infoWindow">' +

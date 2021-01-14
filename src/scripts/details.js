@@ -9,14 +9,20 @@ function loadTakeaways(url, callback) {
     });
 }
 
-function createMarker(lat, lng, map) {
+function createMarker(lat, lng, map, markerURL) {
+    var icon = {
+        url: "./pictures/markers/"+markerURL,
+        scaledSize: new google.maps.Size(50, 50)
+    }
+
     let marker = new google.maps.Marker({
         position: new google.maps.LatLng(lat, lng),
         map,
+        icon: icon
     })
 }
 
-function createMap(lat, lng) {
+function createMap(lat, lng, id) {
     fetch("./json/map-style.json").then(function (response) {
         return response.json();
     }).then(function (json) {
@@ -34,7 +40,7 @@ function createMap(lat, lng) {
         //creates an google map object using preset map options and attaches it to the dom
         map = new google.maps.Map(document.getElementById("mapDiv"), mapOptions);
 
-        createMarker(lat, lng, map);
+        createMarker(lat, lng, map, id);
     });
 }
 
@@ -57,7 +63,7 @@ function takeawayDetails(takeaway) {
     food_type.textContent = takeaway[id].food_type;
     address.innerHTML = takeaway[id].address;
 
-    createMap(lat, lng);
+    createMap(lat, lng, takeaway[id].marker);
 }
 
 function saveTakeaway() {
