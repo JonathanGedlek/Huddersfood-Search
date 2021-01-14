@@ -4,6 +4,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
                 test: /\.html$/,
                 use: [
                     {
@@ -11,7 +18,21 @@ module.exports = {
                         options: { minimize:true }
                     }
                 ]
-            },    
+            }, 
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
+            }   
         ]
         
     },
