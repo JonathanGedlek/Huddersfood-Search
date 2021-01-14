@@ -6,12 +6,16 @@ function createMap(url) {
 
         var mapOptions = {
             center: new google.maps.LatLng("53.64661378473948", "-1.782342991579756"),
-            zoom: 15,
+            zoom: 16,
             disableDefaultUI: false,
             mapTypeControl: true,
             gestureHandling: "greedy",
             //map style JSON information
-            styles: mapStyle
+            styles: mapStyle,
+            label: {
+                text: "Label text",
+                fontFamily: "Helvetica Neue",
+            }
         };
         //creates an google map object using preset map options and attaches it to the dom
         var map = new google.maps.Map(document.getElementById("mapDiv"), mapOptions);
@@ -37,10 +41,18 @@ function createMarkers(map) {
             })
             const contentString =
                 '<div id="infoWindow">' +
-                '<img id="img" src="./pictures/' + takeaway.logo + '" alt="Logo Image">' +
-                '<div id="name">' + takeaway.name + '</div>' +
-                '<a href="details.html?id=' + takeaway.id + '">View</a>' +
-                '<div id="address">' + takeaway.address + '</div>';
+                '<div class = "d-flex">'+
+                '<img class="infoImg" id="img" src="./pictures/' + takeaway.logo + '" alt="Logo Image">' +
+                '<div class="ml-2 mt-2">'+
+                '<div class="mb-1 font-weight-bold" id="name">' + takeaway.name + '</div>' +
+                '<div id="cuisineType">'+takeaway.food_type + '</div>'+
+                '</div>'+
+                '</div>'+
+                '<div class="d-flex">'+
+                '<u class="ml-2 mt-3 "><a class="font-weight-light infoLink" href="details.html?id=' + takeaway.id + '">View</a></u>' +
+                '<div class="ml-4 " id="infoAddress">' + takeaway.address + '</div>'+
+                '</div>';
+
             const infoWindow = new google.maps.InfoWindow({
                 content: contentString,
             })

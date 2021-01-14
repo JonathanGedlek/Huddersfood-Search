@@ -146,8 +146,14 @@ body{
   #address{
     font-size: 10px;
   }
+}
 
+.infoImg{
+  width:50px;
+}
 
+.infoLink{
+  color:black;
 }
 
 }
